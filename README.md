@@ -3,7 +3,7 @@
 A docker playground for SecureVisit 2.0.0.9 RHEL.
 It contains
 - a SecureVisit 2.0.0.9 RHEL running on a CentOS7.9, port 8888 for admin portal.
-- a dumy backend web application server, port 3000 for direct web access.
+- a dumy backend web application server, port 5000 for direct web access.
 - a PostgreSQL server for the backend server, service on port 5432.
 
 ## Dependencies
@@ -26,8 +26,11 @@ docker exec -it centos7sv2_svisit2_1 /bin/sh
 ```bash
 /svisit/sbin/sv_init
 service svisitd start
+exit
 ```
+- Install SecureVisit admin client certificate `svisit2/admin.p12` to your browser. Just find cert import menu in your browser.
+
 ## Have fun
 - Access `https://localhost:8888/` for SecureVisit admin portal.
-- Access `https://localhost:3000/` for backend web application server.
+- Access `http://localhost:5000/` for backend web application server.
 - Use pgAdmin to access PostgreSQL server. User/Password are both `postgres`, port 5432.
