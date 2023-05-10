@@ -3,7 +3,7 @@
 A docker playground for SecureVisit 2.0.0.9 RHEL.
 It contains
 - a SecureVisit 2.0.0.9 RHEL running on a CentOS7.9, port 8888 for admin portal.
-- a dumy backend web application server, port 5000 for direct web access.
+- a dumy backend web application server, port 5000 for HTTP access.
 - a PostgreSQL server for the backend server, service on port 5432.
 
 ## Dependencies
@@ -20,7 +20,7 @@ docker-compose up
 ### Finish SecureVisit initialization by following steps:  
 - Open another terminal and attach to the svisit2 container. 
 ```bash
-docker exec -it centos7sv2-svisit2-1 /bin/sh
+docker exec -it centos7sv2-svisit2-1 bash
 ```
 - Run initialize scripts in the svisit2 container.
 ```bash
