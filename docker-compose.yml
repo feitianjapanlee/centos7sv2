@@ -1,0 +1,9 @@
+version: '3'
+services:
+  svisit2:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      privileged: true
+      ports:
+        - "8888:8888"
