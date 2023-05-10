@@ -1,3 +1,6 @@
+# My staff
+*.rpm
+
 # Logs
 logs
 *.log
