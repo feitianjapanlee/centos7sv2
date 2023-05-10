@@ -12,8 +12,9 @@ It contains
 
 ## To start this playground
 ### Bring up servers
-Place SecureVisit install rpm `svisitc-2.0.0-9.el7.x86_64.rpm` in the `svisit2` subfolder, and run following docker command:
+Place SecureVisit install rpm `svisitc-2.0.0-9.el7.x86_64.rpm` in the `svisit2` subfolder, and run following command in terminal:
 ```bash
+cd centos7sv2
 docker-compose up
 ```
 ### Finish SecureVisit initialization, run following steps:  
