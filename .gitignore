@@ -1,5 +1,7 @@
 # My staff
 *.rpm
+conf
+etc
 
 # Logs
 logs

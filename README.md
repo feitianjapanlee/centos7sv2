@@ -1,18 +1,32 @@
-# centos7sv2
+# centos7sv2 The SecureVisit Playground
+
 A docker playground for SecureVisit 2.0.0.9 RHEL.
 It contains
-- a SecureVisit 2.0.0.9 RHEL running on a CentOS7.9
-- a dumy backend server
-- a MySQL server for the backend server
-## To start this playground 
-Place SecureVisit install rpms in local folder, like c:\local\svisit2009, and run following docker command:
+- a SecureVisit 2.0.0.9 RHEL running on a CentOS7.9, port 8888 for admin portal.
+- a dumy backend web application server, port 3000 for direct web access.
+- a PostgreSQL server for the backend server, service on port 5432.
+
+## Dependencies
+- Docker Desktop(docker-compose)
+- (optional)pgAdmin
+
+## To start this playground
+### Bring up servers
+Place SecureVisit install rpm `svisitc-2.0.0-9.el7.x86_64.rpm` in the `svisit2` subfolder, and run following docker command:
 ```bash
-docker run -d --name centos7sv2 -v c:\local\svisit2009:/host -p 8888:8888 --privileged centos:7 /sbin/init
+docker-compose up
 ```
-## To start a container with svisit already installed, run "docker-compose up", and run following steps:  
-start the container cli: 
+### Finish SecureVisit initialization, run following steps:  
+- Open another terminal and attach to the svisit2 container. 
 ```bash
 docker exec -it centos7sv2_svisit2_1 /bin/sh
-/svisit/sbin/sv_init
-service svisitd start
 ```
+- Run svisit initialize scripts.
+```bash
+#/svisit/sbin/sv_init
+#service svisitd start
+```
+## Have fun
+- Access `https://localhost:8888/` for SecureVisit admin portal.
+- Access `https://localhost:3000/` for backend web application server.
+- Use pgAdmin to access PostgreSQL server. User/Password are both `postgres`, port 5432.

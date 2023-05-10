@@ -1,9 +1,53 @@
 version: '3'
 services:
   svisit2:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      privileged: true
-      ports:
-        - "8888:8888"
+    build:
+      context: ./svisit2
+      dockerfile: Dockerfile
+    privileged: true
+    volumes:
+      - ./svisit2/logs:/svisit/logs
+      - ./svisit2/conf:/svisit/conf
+      - ./svisit2/etc:/svisit/etc
+    networks:
+      - svisit-network
+    ports:
+      - "8888:8888"
+
+  backend-web:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - DB_SCHEMA=postgres
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_HOST=backend-db
+    depends_on:
+      - backend-db
+    ports:
+      - "3000:3000"
+    networks:
+      - svisit-network
+      - backend-network
+
+  backend-db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - "dbdata:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+    networks:
+      - backend-network
+
+volumes:
+  dbdata:
+
+networks:
+  svisit-network:
+    driver: bridge
+  backend-network:
+    driver: bridge
