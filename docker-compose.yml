@@ -6,9 +6,7 @@ services:
       dockerfile: Dockerfile
     privileged: true
     volumes:
-      - ./svisit2/logs:/svisit/logs
-      - ./svisit2/conf:/svisit/conf
-      - ./svisit2/etc:/svisit/etc
+      - svdata:/svisit
     networks:
       - svisit-network
     ports:
@@ -46,6 +44,7 @@ services:
 
 volumes:
   dbdata:
+  svdata:
 
 networks:
   svisit-network:

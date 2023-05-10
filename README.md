@@ -22,10 +22,10 @@ docker-compose up
 ```bash
 docker exec -it centos7sv2_svisit2_1 /bin/sh
 ```
-- Run svisit initialize scripts.
+- Run initialize scripts in the svisit2 container.
 ```bash
-#/svisit/sbin/sv_init
-#service svisitd start
+/svisit/sbin/sv_init
+service svisitd start
 ```
 ## Have fun
 - Access `https://localhost:8888/` for SecureVisit admin portal.
