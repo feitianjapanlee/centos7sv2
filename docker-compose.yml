@@ -11,6 +11,8 @@ services:
       - svisit-network
     ports:
       - "0.0.0.0:8888:8888"
+      - "0.0.0.0:8080:8080"
+      - "0.0.0.0:8443:8443"
 
   backend-web:
     build: 
