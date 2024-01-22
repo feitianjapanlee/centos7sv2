@@ -1,4 +1,4 @@
-# Use the official Node.js 14 image as a parent image
+# Use the official Node.js latest image as a parent image
 FROM node:latest
 
 # Set the working directory

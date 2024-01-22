@@ -7,6 +7,7 @@ services:
     privileged: true
     volumes:
       - svdata:/svisit
+      - /usr/share/zoneinfo/Asia/Tokyo:/etc/localtime
     networks:
       - svisit-network
     ports:
@@ -18,7 +19,10 @@ services:
     build: 
       context: ./backend/demo-httpheader
       dockerfile: Dockerfile
+    volumes:
+      - /usr/share/zoneinfo/Asia/Tokyo:/etc/localtime
     environment:
+      - PORT=3000
       - DB_SCHEMA=postgres
       - DB_USER=postgres
       - DB_PASSWORD=postgres
@@ -38,6 +42,7 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
       - "dbdata:/var/lib/postgresql/data"
+      - /usr/share/zoneinfo/Asia/Tokyo:/etc/localtime
     ports:
       - "0.0.0.0:5432:5432"
     networks:
