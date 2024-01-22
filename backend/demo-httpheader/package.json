@@ -1,8 +1,8 @@
 {
-  "name": "sv-test-app",
+  "name": "demo-httpheader",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "access-log": "^0.4.1"
   }
 }

@@ -1,4 +1,5 @@
 const http = require('http');
+const httplog = require('access-log');
 
 const server = http.createServer((req, res) => {
     let body = '';
@@ -15,6 +16,7 @@ const server = http.createServer((req, res) => {
 });
 
 function responseAll(req, res, body) {
+    httplog(req, res);
     res.writeHead(200, {'Content-Type': 'text/plain'});
     res.write('IP: ' + req.socket.remoteAddress + '\n');
     res.write('Port: ' + req.socket.remotePort + '\n');
@@ -28,7 +30,8 @@ function responseAll(req, res, body) {
     res.end();
 }
 
-const port = 3000;
+const port = process.env.PORT || 8080;
+
 server.listen(port, () => {
     console.log(`Server started on port ${port}.`);
 });
