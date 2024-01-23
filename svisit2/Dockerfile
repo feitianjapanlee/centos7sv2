@@ -1,4 +1,4 @@
-FROM centos:7
+FROM local/c7-systemd
 WORKDIR /host
 COPY svisitc-2.0.0-9.el7.x86_64.rpm .
 RUN yum install -y epel-release

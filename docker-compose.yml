@@ -8,6 +8,7 @@ services:
     volumes:
       - svdata:/svisit
       - /usr/share/zoneinfo/Asia/Tokyo:/etc/localtime
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
     networks:
       - svisit-network
     ports:

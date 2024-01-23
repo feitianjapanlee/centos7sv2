@@ -28,6 +28,9 @@ docker exec -it centos7sv2-svisit2-1 bash
 service svisitd start
 exit
 ```
+- CentOS7 docker container seems not support cgroupv2 well, which will cause rsyslog and cron services do not start. Read following for more info.
+[cgroup v2 環境において Docker コンテナ内で systemd を起動するときの注意点](https://qiita.com/ryysud/items/e6bfd61a121d6f922288)
+
 - Install SecureVisit admin client certificate `svisit2/admin.p12` to your browser. Usually uses cert import function in your browser.
 
 ## Have fun
