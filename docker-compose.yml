@@ -5,10 +5,19 @@ services:
       context: ./svisit2
       dockerfile: Dockerfile
     privileged: true
+    cgroup: host
+    cap_add:
+      - SYS_ADMIN
+      - NET_ADMIN
+      - MKNOD
     volumes:
       - svdata:/svisit
       - /usr/share/zoneinfo/Asia/Tokyo:/etc/localtime
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    tmpfs:
+      - /tmp
+      - /run
+      - /run/lock
     networks:
       - svisit-network
     ports:

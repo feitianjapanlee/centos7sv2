@@ -10,15 +10,21 @@ It contains
 - Docker Desktop for Windows (>4.4.2)
 - (optional) pgAdmin
 
-## To start this playground
+## To build and start this playground
+### Build a base CentOS7 image with systemd installed
+Build a CentOS7 image with SecureVisit 2.0.x supports. With **systemd** installed.
+SecureVisit need log and cron service.
+```bash
+docker build -f Dockerfile.centos7-systemd-baseimage --rm -t local/c7-systemd .
+``` 
 ### Bring up servers
-Place SecureVisit install rpm `svisitc-2.0.0-9.el7.x86_64.rpm` in the `svisit2` sub-folder, and run following command in terminal:
+Place SecureVisit installer rpm `svisitc-2.0.0-9.el7.x86_64.rpm` in the `svisit2` sub-folder, and run following command in terminal:
 ```bash
 cd centos7sv2
-docker-compose up
+docker-compose up --build
 ```
 ### Finish SecureVisit initialization by following steps:  
-- Open another terminal and attach to the svisit2 container. 
+- SecureVisit installation contains some interactive steps, so open another terminal and attach to the svisit2 container like following. 
 ```bash
 docker exec -it centos7sv2-svisit2-1 bash
 ```
@@ -28,9 +34,6 @@ docker exec -it centos7sv2-svisit2-1 bash
 service svisitd start
 exit
 ```
-- CentOS7 docker container seems not support cgroupv2 well, which will cause rsyslog and cron services do not start. Read following for more info.
-[cgroup v2 環境において Docker コンテナ内で systemd を起動するときの注意点](https://qiita.com/ryysud/items/e6bfd61a121d6f922288)
-
 - Install SecureVisit admin client certificate `svisit2/admin.p12` to your browser. Usually uses cert import function in your browser.
 
 ## Have fun
@@ -39,3 +42,10 @@ exit
 - SecureVisit mapping setting to backend server: Port `8080`, `default` map to `http://backend-web:3000/`
 - SecureVisit fresh logs: `docker exec -it centos7sv2-svisit2-1 bash -c "tail -f /svisit/logs/*.log"`
 - Use pgAdmin to access PostgreSQL server. User/Password are both `postgres`, port `5432`.
+
+## Reference
+- CentOS7 docker container seems not support cgroupv2 well, which will cause rsyslog and cron services do not start. Read following for more info.
+[https://qiita.com/ryysud/items/e6bfd61a121d6f922288]
+- There are some notice to use **systemd** in container:
+[https://systemd.io/CONTAINER_INTERFACE/]
+[https://developers.redhat.com/blog/2016/09/13/running-systemd-in-a-non-privileged-container#]

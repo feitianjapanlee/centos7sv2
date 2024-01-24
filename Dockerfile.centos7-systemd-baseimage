@@ -1,5 +1,12 @@
 FROM centos:7
+# need by systemd
 ENV container docker
+# match the stop signal to systemd's.
+STOPSIGNAL SIGRTMIN+3
+
+RUN yum -y install systemd && yum clean all
+
+# remove all unnecessary service.
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \
 systemd-tmpfiles-setup.service ] || rm -f $i; done); \
 rm -f /lib/systemd/system/multi-user.target.wants/*;\
@@ -9,6 +16,16 @@ rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
 rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
+
+# optional: enable journald.
+# known issus: audit won't work under rootless env due to permission.
+# RUN cd /lib/systemd/system \
+#    && ln -s ../systemd-journald.socket ./sockets.target.wants/systemd-journald.socket \
+#    && ln -s ../systemd-journald-audit.socket ./sockets.target.wants/systemd-journald-audit.socket \
+#    && ln -s ../systemd-journald-dev-log.socket ./sockets.target.wants/systemd-journald-dev-log.socket \
+#    && ln -s ../systemd-journald.service ./sysinit.target.wants/systemd-journald.service \
+#    && ln -s ../systemd-journal-flush.service ./sysinit.target.wants/systemd-journal-flush.service
+VOLUME [ "/tmp", "/run", "/run/lock" ]
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]
 # $ docker build -f Dockerfile.centos7-systemd-baseimage --rm -t local/c7-systemd .
