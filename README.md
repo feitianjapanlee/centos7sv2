@@ -11,16 +11,9 @@ It contains
 - (optional) pgAdmin
 
 ## To build and start this playground
-### Build a base CentOS7 image with systemd installed
-Build a CentOS7 image with SecureVisit 2.0.x supports. With **systemd** installed.
-SecureVisit need log and cron service.
-```bash
-docker build -f Dockerfile.centos7-systemd-baseimage --rm -t local/c7-systemd .
-``` 
 ### Bring up servers
 Place SecureVisit installer rpm `svisitc-2.0.0-9.el7.x86_64.rpm` in the `svisit2` sub-folder, and run following command in terminal:
 ```bash
-cd centos7sv2
 docker-compose up --build
 ```
 ### Finish SecureVisit initialization by following steps:  
