@@ -19,7 +19,7 @@ docker-compose up --build
 ### Finish SecureVisit initialization by following steps:  
 - SecureVisit installation contains some interactive steps, so open another terminal and attach to the svisit2 container like following. 
 ```bash
-docker exec -it centos7sv2-svisit2-1 bash
+docker exec -it centos7sv2_svisit2_1 bash
 ```
 - Run initialize scripts in the svisit2 container.
 ```bash
@@ -28,12 +28,14 @@ service svisitd start
 exit
 ```
 - Install SecureVisit admin client certificate `svisit2/admin.p12` to your browser. Usually uses cert import function in your browser.
+- Access `https://localhost:8888/` for SecureVisit admin portal and set Port to `8080` in **Server Setting** tab and change **default** mapping's target URL to `http://centos7sv2_backend-web_1:3000`.
 
 ## Have fun
 - SecureVisit admin portal: `https://localhost:8888/`
 - Backend web application server: `http://localhost:5000/` 
-- SecureVisit mapping setting to backend server: Port `8080`, `default` map to `http://backend-web:3000/`
-- SecureVisit fresh logs: `docker exec -it centos7sv2-svisit2-1 bash -c "tail -f /svisit/logs/*.log"`
+- SecureVisit mapping setting to backend server: Port `8080`, `default` map to `http://centos7sv2_backend-web_1:3000/`
+- SecureVisit fresh nginx logs: `docker exec -it centos7sv2_svisit2_1 bash -c "tail -f /svisit/logs/*.log"`
+- SecureVisit fresh svisitd logs: `docker exec -it centos7sv2_svisit2_1 bash -c "tail -f /svisit/logs/*.log"`
 - Use pgAdmin to access PostgreSQL server. User/Password are both `postgres`, port `5432`.
 
 ## Reference
@@ -42,3 +44,5 @@ exit
 - There are some notice to use **systemd** in container:
 [https://systemd.io/CONTAINER_INTERFACE/]
 [https://developers.redhat.com/blog/2016/09/13/running-systemd-in-a-non-privileged-container#]
+- Failed to get D-Bus connection:Operation not permitted
+[https://labor.ewigleere.net/2021/02/11/docker_commit_and_test_systemctl_start_httpd/]
