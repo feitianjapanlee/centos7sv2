@@ -10,7 +10,7 @@ It contains
 - Docker Desktop for Windows (>4.4.2)
 - (optional) pgAdmin
 
-## To build and start this playground
+## Build and start this playground
 ### Bring up servers
 Place SecureVisit installer rpm `svisitc-2.0.0-9.el7.x86_64.rpm` in the `svisit2` sub-folder, and run following command in terminal:
 ```bash
@@ -34,8 +34,14 @@ exit
 - SecureVisit admin portal: `https://localhost:8888/`
 - Backend web application server: `http://localhost:5000/` 
 - SecureVisit mapping setting to backend server: Port `8080`, `default` map to `http://centos7sv2_backend-web_1:3000/`
+- Enable debug log of SecureVisit:
+```bash
+docker exec -it centos7sv2_svisit2_1 bash
+echo "local5.debug;local5.err;local5.alert;local5.emerg;local5.info  /usr/local/svisit/log/sv.debug.log" >> /etc/rsyslog.conf
+systemctl restart rsyslog
+``` 
 - SecureVisit fresh nginx logs: `docker exec -it centos7sv2_svisit2_1 bash -c "tail -f /svisit/logs/*.log"`
-- SecureVisit fresh svisitd logs: `docker exec -it centos7sv2_svisit2_1 bash -c "tail -f /svisit/logs/*.log"`
+- SecureVisit fresh svisitd logs: `docker exec -it centos7sv2_svisit2_1 bash -c "tail -f /svisit/log/*.log"`
 - Use pgAdmin to access PostgreSQL server. User/Password are both `postgres`, port `5432`.
 
 ## Reference
