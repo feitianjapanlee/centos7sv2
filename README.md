@@ -28,11 +28,12 @@ service svisitd start
 exit
 ```
 - Install SecureVisit admin client certificate `svisit2/admin.p12` to your browser. Usually uses cert import function in your browser.
-- Access `https://localhost:8888/` for SecureVisit admin portal and set Port to `8080` in **Server Setting** tab and change **default** mapping's target URL to `http://centos7sv2_backend-web_1:3000`.
+- Access `https://<docker host>:8888/` for SecureVisit admin portal and set Port to `8080` in **Server Setting** tab and change **default** mapping's target URL to `http://centos7sv2_backend-web_1:3000`.
 
 ## Have fun
-- SecureVisit admin portal: `https://localhost:8888/`
-- Backend web application server: `http://localhost:5000/` 
+- Backend through SecureVisit: `http://<docker host>:8080/`
+- SecureVisit admin portal: `https://<docker host>:8888/`
+- Backend web application server: `http://<docker host>:5000/` 
 - SecureVisit mapping setting to backend server: Port `8080`, `default` map to `http://centos7sv2_backend-web_1:3000/`
 - Enable debug log of SecureVisit:
 ```bash
