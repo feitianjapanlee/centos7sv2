@@ -23,33 +23,33 @@ services:
       - /usr/share/zoneinfo/Asia/Tokyo:/etc/localtime
     environment:
       - PORT=3000
-      - DB_SCHEMA=postgres
-      - DB_USER=postgres
-      - DB_PASSWORD=postgres
-      - DB_HOST=backend-db
-    depends_on:
-      - backend-db
+#      - DB_SCHEMA=postgres
+#      - DB_USER=postgres
+#      - DB_PASSWORD=postgres
+#      - DB_HOST=backend-db
+#    depends_on:
+#      - backend-db
     ports:
       - "0.0.0.0:5000:3000"
     networks:
       - svisit-network
       - backend-network
 
-  backend-db:
-    image: postgres:latest
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    volumes:
-      - "dbdata:/var/lib/postgresql/data"
-      - /usr/share/zoneinfo/Asia/Tokyo:/etc/localtime
-    ports:
-      - "0.0.0.0:5432:5432"
-    networks:
-      - backend-network
+#  backend-db:
+#    image: postgres:latest
+#    environment:
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=postgres
+#    volumes:
+#      - "dbdata:/var/lib/postgresql/data"
+#      - /usr/share/zoneinfo/Asia/Tokyo:/etc/localtime
+#    ports:
+#      - "0.0.0.0:5432:5432"
+#    networks:
+#      - backend-network
 
 volumes:
-  dbdata:
+#  dbdata:
   svdata:
 
 networks:
