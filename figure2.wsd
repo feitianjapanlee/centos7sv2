@@ -1,0 +1,54 @@
+@startuml
+participant ”ブラウザ” as browser order 10
+participant nginx order 20
+participant svisitd order 30
+participant backend order 40
+group "認証不要なURL”
+  browser -> nginx: request
+  rnote over nginx
+    backendへ振り分け
+  endrnote
+  nginx -> backend: 
+  activate backend
+  backend -> nginx
+  deactivate backend
+  nginx -> browser:response
+end
+group "認証必要なURL”
+  browser -> nginx: request
+  rnote over nginx
+    svisitdへ振り分け
+  endrnote
+  nginx -> svisitd: 
+  activate svisitd 
+  svisitd -> nginx:認証画面等
+  nginx -> browser:認証画面等
+  browser -> nginx:UserID,Token等
+  rnote over nginx
+    svisitdへ振り分け
+  endrnote
+  nginx -> svisitd
+  rnote over svisitd
+    認証処理
+  endrnote
+  svisitd -> backend:元request
+  activate backend
+  backend -> svisitd
+  deactivate backend
+  svisitd -> nginx
+  deactivate svisitd
+  nginx -> browser:response
+end
+group "/system/*”
+  browser -> nginx: request
+  rnote over nginx
+    svisitdへ振り分け
+  endrnote
+  nginx -> svisitd: 
+  rnote over svisitd
+    systemコンテンツ出力
+  endrnote
+  svisitd -> nginx
+  nginx -> browser:systemコンテンツ
+end
+@enduml

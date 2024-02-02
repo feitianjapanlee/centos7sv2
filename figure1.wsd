@@ -1,0 +1,19 @@
+@startuml
+skinparam BackgroundColor transparent
+skinparam componentStyle rectangle
+component "クライアント側" as client {
+     [ブラウザ] as browser
+     [Token監視プロセス]
+}
+
+component "サーバー側" as server {
+   component Backend {
+     [業務Webアプリケーション]
+   }
+   component SecureVisit {
+     [svisitd]
+     [nginx]
+   }
+}
+[browser] <-> [SecureVisit]
+@enduml
