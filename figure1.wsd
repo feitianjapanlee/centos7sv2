@@ -7,13 +7,13 @@ package "クライアント側" as client {
 }
 
 package "サーバー側" as server {
-   package Backend {
+   node Backend {
      [backend]
      note bottom of backend
        業務Webアプリケーション
      end note
    }
-   package SecureVisit {
+   node SecureVisit {
      [svisitd]
      note bottom of svisitd
        認証処理
