@@ -19,14 +19,10 @@ group "認証不要なURL”
 end
 group "認証必要なURL”
   browser -> nginx: request
-  rnote over nginx
-    svisitdへ振り分け
-  endrnote
+  rnote over nginx:svisitdへ振り分け
   nginx -> svisitd: 
   activate svisitd 
-  rnote over svisitd
-    セッション有効性の判断
-  endrnote
+  rnote over svisitd:セッション有効性の判断
   group "認証済み”
     svisitd -> backend:元request 
     activate backend
@@ -39,13 +35,10 @@ group "認証必要なURL”
     svisitd -> nginx:認証画面等
     nginx -> browser:認証画面等
     browser -> nginx:UserID,Token等
-    rnote over nginx
-      svisitdへ振り分け
-    endrnote
+    rnote over nginx:svisitdへ振り分け
     nginx -> svisitd
-    rnote over svisitd
-      認証処理
-    endrnote
+    rnote over svisitd:認証処理
+    / note over backend #FFAAAA:requestが/system/の場合、\nここで上書き問題が発生
     group "認証失敗"
       svisitd -> nginx:エラー画面等
       nginx -> browser:エラー画面等
@@ -63,13 +56,9 @@ group "認証必要なURL”
 end
 group "/system/*”
   browser -> nginx: request
-  rnote over nginx
-    svisitdへ振り分け
-  endrnote
+  rnote over nginx:svisitdへ振り分け
   nginx -> svisitd: 
-  rnote over svisitd
-    systemコンテンツ出力
-  endrnote
+  rnote over svisitd:systemコンテンツ出力
   svisitd -> nginx
   nginx -> browser:systemコンテンツ
 end
