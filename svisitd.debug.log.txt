@@ -1,0 +1,386 @@
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:25:33 147537ba7c86 svisit: Current file path is /svisit/etc
+Feb  9 17:25:33 147537ba7c86 svisit: dest=CustomerID=10100UserLimit=10TokenLimit=10IssueDate=2014-5-23ExpireDate=2030-5-23
+Feb  9 17:25:33 147537ba7c86 svisit: src=CustomerID=10100UserLimit=10TokenLimit=10IssueDate=2014-5-23ExpireDate=2030-5-23
+Feb  9 17:25:33 147537ba7c86 svisit: des data length is =80,src data length is=80
+Feb  9 17:25:33 147537ba7c86 svisit: license content is:
+Feb  9 17:25:33 147537ba7c86 svisit: CustomerID=10100
+Feb  9 17:25:33 147537ba7c86 svisit: UserLimit=10
+Feb  9 17:25:33 147537ba7c86 svisit: TokenLimit=10
+Feb  9 17:25:33 147537ba7c86 svisit: IssueDate=2014-5-23
+Feb  9 17:25:33 147537ba7c86 svisit: ExpireDate=2030-5-23
+Feb  9 17:25:33 147537ba7c86 svisit: verify_time_expire: set time is year 2014, month 5, day 23
+Feb  9 17:25:33 147537ba7c86 svisit: verify_time_expire: current time is year 2024, month 2, day 9
+Feb  9 17:25:33 147537ba7c86 svisit: verify_time_expire: set time is year 2030, month 5, day 23
+Feb  9 17:25:33 147537ba7c86 svisit: verify_time_expire: current time is year 2024, month 2, day 9
+Feb  9 17:25:33 147537ba7c86 svisit: get user  count 4
+Feb  9 17:25:33 147537ba7c86 svisit: get token  count 2
+Feb  9 17:25:33 147537ba7c86 svisit: start http server before 2
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:25:50 +0900 svisit: -  - 192.168.1.124 -  -  - GET /def HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 200
+09/Feb/2024:17:25:50 +0900 svisit: -  - 192.168.1.124 -  -  - GET /system/error/load.gif HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 304
+09/Feb/2024:17:25:50 +0900 svisit: -  - 192.168.1.124 -  -  - GET /system/md5.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 304
+09/Feb/2024:17:25:50 +0900 svisit: -  - 192.168.1.124 -  -  - GET /system/error/svbk.jpg HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 304
+09/Feb/2024:17:25:50 +0900 svisit: -  - 192.168.1.124 -  -  - GET /system/sv.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 304
+09/Feb/2024:17:25:51 +0900 svisit: -  - 192.168.1.124 -  -  - GET /system/1000ND_client.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 304
+09/Feb/2024:17:25:51 +0900 svisit: -  - 192.168.1.124 -  -  - GET /system/websocketver.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 304
+09/Feb/2024:17:25:51 +0900 svisit: -  - 192.168.1.124 -  -  - GET /system/websocket.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 304
+09/Feb/2024:17:25:51 +0900 svisit: -  - 192.168.1.124 -  -  - GET /system/protocolcheck.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 304
+09/Feb/2024:17:25:51 +0900 svisit: -  - 192.168.1.124 -  -  - GET /favicon.ico HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:25:52 147537ba7c86 svisit: proc_login ..... , htype
+Feb  9 17:25:52 147537ba7c86 svisit: s begin ..... 1
+Feb  9 17:25:52 147537ba7c86 svisit: proc_login cookie  "Cookie: ftkeyid=34552102CB4AB2414A42FADF8E6785414D81D5471C6A6AEB" , s: 1
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:25:52 +0900 svisit: -  - 192.168.1.124 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:25:52 147537ba7c86 svisit: s in .....
+Feb  9 17:25:52 147537ba7c86 svisit: u_cookie (ftkeyid=34552102CB4AB2414A42FADF8E6785414D81D5471C6A6AEB)
+Feb  9 17:25:52 147537ba7c86 svisit: stage  (-1)
+Feb  9 17:25:52 147537ba7c86 svisit: proc_login auth process, status  "1" , config initjson.txt is {#015#012 "tokenauth":"1",#015#012 "pwdauth":"0",#015#012 "otpauth":"0",#015#012 "requirePIN":"1",#015#012 "requireUserID":"0",#015#012 "modifyPIN":"0",#015#012 "delaytimeout":"0",#015#012 "inputpwd":"1",#015#012 "cacheuserid":"0", #015#012 "rescuepwd":"0", #015#012 "termlimit":"0", #015#012 "termvalue":"0"#015#012}
+Feb  9 17:25:59 147537ba7c86 svisit: proc_login ..... , htype
+Feb  9 17:25:59 147537ba7c86 svisit: s begin ..... 1
+Feb  9 17:25:59 147537ba7c86 svisit: proc_login cookie  "Cookie: ftkeyid=34552102CB4AB2414A42FADF8E6785414D81D5471C6A6AEB" , s: 1
+Feb  9 17:25:59 147537ba7c86 svisit: s in .....
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:25:59 +0900 svisit: -  - 192.168.1.124 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:25:59 147537ba7c86 svisit: u_cookie (ftkeyid=34552102CB4AB2414A42FADF8E6785414D81D5471C6A6AEB)
+Feb  9 17:25:59 147537ba7c86 svisit: stage  (1)
+Feb  9 17:25:59 147537ba7c86 svisit: proc_login auth process, status  "1" , config initjson.txt is {#015#012 "tokenauth":"1",#015#012 "pwdauth":"0",#015#012 "otpauth":"0",#015#012 "requirePIN":"1",#015#012 "requireUserID":"0",#015#012 "modifyPIN":"0",#015#012 "delaytimeout":"0",#015#012 "inputpwd":"1",#015#012 "cacheuserid":"0", #015#012 "rescuepwd":"0", #015#012 "termlimit":"0", #015#012 "termvalue":"0"#015#012}
+Feb  9 17:25:59 147537ba7c86 svisit: proc_login ..... , htype ePass1000ND
+Feb  9 17:25:59 147537ba7c86 svisit: s begin ..... 2
+Feb  9 17:25:59 147537ba7c86 svisit: proc_login cookie  "Cookie: ftkeyid=34552102CB4AB2414A42FADF8E6785414D81D5471C6A6AEB" , s: 2
+Feb  9 17:25:59 147537ba7c86 svisit: s in .....
+Feb  9 17:25:59 147537ba7c86 svisit: u_cookie (ftkeyid=34552102CB4AB2414A42FADF8E6785414D81D5471C6A6AEB)
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:25:59 +0900 svisit: -  - 192.168.1.124 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:25:59 147537ba7c86 svisit: stage  (1)
+Feb  9 17:25:59 147537ba7c86 svisit: proc_login userid is  "false"
+Feb  9 17:25:59 147537ba7c86 svisit: proc_login auth process, status  "2" , challenge is {#015#012 "tokencha":"e8312723c7108e6fc685ef970619bbbba61d86b2177c6ac746c462333daa4655a870e0932ddcdf0e61a552d035ceabe4",#015#012 "pwdcha":"e8312723c7108e6fc685ef970619bbbba61d86b2177c6ac746c462333daa4655a870e0932ddcdf0e61a552d035ceabe4",#015#012 "rpwdcha":"e8312723c7108e6fc685ef970619bbbba61d86b2177c6ac746c462333daa4655a870e0932ddcdf0e61a552d035ceabe4"#015#012 }, userid is false
+Feb  9 17:25:59 147537ba7c86 svisit: proc_login ..... , htype ePass1000ND
+Feb  9 17:25:59 147537ba7c86 svisit: s begin ..... 3
+Feb  9 17:25:59 147537ba7c86 svisit: proc_login cookie  "Cookie: ftkeyid=34552102CB4AB2414A42FADF8E6785414D81D5471C6A6AEB" , s: 3
+Feb  9 17:25:59 147537ba7c86 svisit: s in .....
+Feb  9 17:25:59 147537ba7c86 svisit: u_cookie (ftkeyid=34552102CB4AB2414A42FADF8E6785414D81D5471C6A6AEB)
+Feb  9 17:25:59 147537ba7c86 svisit: stage  (2)
+Feb  9 17:25:59 147537ba7c86 svisit: auth_getuser from hid FA5B5DCF42F81BC1
+Feb  9 17:25:59 147537ba7c86 svisit: proc_login userid is  "BBB" find from hid FA5B5DCF42F81BC1
+Feb  9 17:25:59 147537ba7c86 svisit: getuser a userid is  "BBB" find from hid FA5B5DCF42F81BC1
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL:  1,  find type is 1
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL:  2, get field num 1
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL:  3, get gourp id 3
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL: get group id is 3
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL: get group name is UG2, start 2024-02-09 17:00:24+09, end 2099-12-31 23:59:59+09
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 0
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 25
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 25
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL: get user BBB access 1 password id is 7, valid time:2024-02-09 17:01:25+09 - 2099-12-31 23:59:59+09, token1 4
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 1
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 25
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 25
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL: get password id 7 password is  access 1 valid time 2024-02-09 17:01:25+09-2099-12-31 23:59:59+09, counts -1 t.
+Feb  9 17:25:59 147537ba7c86 svisit: hmacmd5_authenticate, token proc...
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL:  1,  find type is 2
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL:  2, get field num 1
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL:  3, get gourp id 3
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL: get group id is 3
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL: get group name is UG2, start 2024-02-09 17:00:24+09, end 2099-12-31 23:59:59+09
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 0
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 25
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 25
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL: get user BBB access 1 password id is 7, valid time:2024-02-09 17:01:25+09 - 2099-12-31 23:59:59+09, token1 4
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 1
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 25
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 25
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQ: find token 1 id FA5B5DCF42F81BC1
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQ: find token 2 id is FA5B5DCF42F81BC1
+Feb  9 17:25:59 147537ba7c86 svisit: Auth->PostgreSQL: get token hid FA5B5DCF42F81BC1 secret is 19F36102A8E24EB8AD0C67397DBF36C41DBFC5AAAF9D8100197EB2123C076FDE access 1 valid time 2024-02-09 17:21:17+09-2099-12-31 23:59:59+09 t tokenid 4.
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: string len is 48, password len is 64
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: challenge  is e8312723c7108e6fc685ef970619bbbba61d86b2177c6ac746c462333daa4655a870e0932ddcdf0e61a552d035ceabe4
+Feb  9 17:25:59 147537ba7c86 svisit: alg is hmac_md5
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: server compute digest out  is 275b2de08b6e2882acdcc332c10abce9
+Feb  9 17:25:59 147537ba7c86 svisit: rlm_eap_hmacmd5: client digest string is 275b2de08b6e2882acdcc332c10abce9
+Feb  9 17:25:59 147537ba7c86 svisit: hmacmd5_authenticate , update login time ...
+Feb  9 17:25:59 147537ba7c86 svisit: userid BBB
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:25:59 +0900 svisit: -  - 192.168.1.124 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:25:59 147537ba7c86 svisit: fromhost 192.168.1.124
+Feb  9 17:25:59 147537ba7c86 svisit: tokenid FA5B5DCF42F81BC1
+Feb  9 17:25:59 147537ba7c86 svisit: tokentype ePass1000ND
+Feb  9 17:25:59 147537ba7c86 svisit: AuthMethod
+Feb  9 17:25:59 147537ba7c86 svisit: requrl /def
+
+==> /svisit/log/sv.auths.log <==
+Feb  9 17:25:59 147537ba7c86 svisit: BBB - 192.168.1.124 - FA5B5DCF42F81BC1 - ePass1000ND -  -  - /def - CCode:e8312723c7108e6fc685ef970619bbbba61d86b2177c6ac746c462333daa4655a870e0932ddcdf0e61a552d035ceabe4 RCode:275b2de08b6e2882acdcc332c10abce9
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:25:59 147537ba7c86 svisit: BBB - 192.168.1.124 - FA5B5DCF42F81BC1 - ePass1000ND -  -  - /def - CCode:e8312723c7108e6fc685ef970619bbbba61d86b2177c6ac746c462333daa4655a870e0932ddcdf0e61a552d035ceabe4 RCode:275b2de08b6e2882acdcc332c10abce9
+
+==> /svisit/log/sv.access.log <==
+Feb  9 17:25:59 147537ba7c86 svisit: BBB - UG2 - 192.168.1.124 - FA5B5DCF42F81BC1 - ePass1000ND - /def -  -  -  - HTTP/1.1 200 OK
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:25:59 147537ba7c86 svisit: BBB - UG2 - 192.168.1.124 - FA5B5DCF42F81BC1 - ePass1000ND - /def -  -  -  - HTTP/1.1 200 OK
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:25:59 +0900 svisit: -  - 192.168.1.124 -  -  - GET /def HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 200
+09/Feb/2024:17:25:59 +0900 svisit: -  - 192.168.1.124 -  -  - GET /favicon.ico HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0 - HTTP/1.1 200
+09/Feb/2024:17:26:12 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/ HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+09/Feb/2024:17:26:12 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/error/load.gif HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:12 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/md5.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:12 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/error/svbk.jpg HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:12 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/sv.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:12 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/websocket.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:12 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/protocolcheck.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:12 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/1000ND_client.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:12 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/websocketver.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:12 +0900 svisit: -  - 192.168.1.144 -  -  - GET /favicon.ico HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:14 147537ba7c86 svisit: proc_login ..... , htype
+Feb  9 17:26:14 147537ba7c86 svisit: s begin ..... 1
+Feb  9 17:26:14 147537ba7c86 svisit: proc_login cookie  "Cookie: test1=testtest" , s: 1
+Feb  9 17:26:14 147537ba7c86 svisit: s in .....
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:26:14 +0900 svisit: -  - 192.168.1.144 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:14 147537ba7c86 svisit: u_cookie (test1=testtest)
+Feb  9 17:26:14 147537ba7c86 svisit: stage  (100)
+Feb  9 17:26:14 147537ba7c86 svisit: proc_login auth process, status  "1" , config initjson.txt is {#015#012 "tokenauth":"1",#015#012 "pwdauth":"0",#015#012 "otpauth":"0",#015#012 "requirePIN":"1",#015#012 "requireUserID":"0",#015#012 "modifyPIN":"0",#015#012 "delaytimeout":"0",#015#012 "inputpwd":"1",#015#012 "cacheuserid":"0", #015#012 "rescuepwd":"0", #015#012 "termlimit":"0", #015#012 "termvalue":"0"#015#012}
+Feb  9 17:26:21 147537ba7c86 svisit: proc_login ..... , htype
+Feb  9 17:26:21 147537ba7c86 svisit: s begin ..... 1
+Feb  9 17:26:21 147537ba7c86 svisit: proc_login cookie  "Cookie: test1=testtest" , s: 1
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:26:21 +0900 svisit: -  - 192.168.1.144 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:21 147537ba7c86 svisit: s in .....
+Feb  9 17:26:21 147537ba7c86 svisit: u_cookie (test1=testtest)
+Feb  9 17:26:21 147537ba7c86 svisit: stage  (1)
+Feb  9 17:26:21 147537ba7c86 svisit: proc_login auth process, status  "1" , config initjson.txt is {#015#012 "tokenauth":"1",#015#012 "pwdauth":"0",#015#012 "otpauth":"0",#015#012 "requirePIN":"1",#015#012 "requireUserID":"0",#015#012 "modifyPIN":"0",#015#012 "delaytimeout":"0",#015#012 "inputpwd":"1",#015#012 "cacheuserid":"0", #015#012 "rescuepwd":"0", #015#012 "termlimit":"0", #015#012 "termvalue":"0"#015#012}
+Feb  9 17:26:22 147537ba7c86 svisit: proc_login ..... , htype ePass1000ND
+Feb  9 17:26:22 147537ba7c86 svisit: s begin ..... 2
+Feb  9 17:26:22 147537ba7c86 svisit: proc_login cookie  "Cookie: test1=testtest" , s: 2
+Feb  9 17:26:22 147537ba7c86 svisit: s in .....
+Feb  9 17:26:22 147537ba7c86 svisit: u_cookie (test1=testtest)
+Feb  9 17:26:22 147537ba7c86 svisit: stage  (1)
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:26:22 +0900 svisit: -  - 192.168.1.144 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:22 147537ba7c86 svisit: proc_login userid is  "false"
+Feb  9 17:26:22 147537ba7c86 svisit: proc_login auth process, status  "2" , challenge is {#015#012 "tokencha":"df5c00598f3a5d0a809e0b26544b5beb1670c4e2686463409e6ec28b6bfa5c01acbbdc5b92870592cf81b56bfd5a2311",#015#012 "pwdcha":"df5c00598f3a5d0a809e0b26544b5beb1670c4e2686463409e6ec28b6bfa5c01acbbdc5b92870592cf81b56bfd5a2311",#015#012 "rpwdcha":"df5c00598f3a5d0a809e0b26544b5beb1670c4e2686463409e6ec28b6bfa5c01acbbdc5b92870592cf81b56bfd5a2311"#015#012 }, userid is false
+Feb  9 17:26:22 147537ba7c86 svisit: proc_login ..... , htype ePass1000ND
+Feb  9 17:26:22 147537ba7c86 svisit: s begin ..... 3
+Feb  9 17:26:22 147537ba7c86 svisit: proc_login cookie  "Cookie: test1=testtest" , s: 3
+Feb  9 17:26:22 147537ba7c86 svisit: s in .....
+Feb  9 17:26:22 147537ba7c86 svisit: u_cookie (test1=testtest)
+Feb  9 17:26:22 147537ba7c86 svisit: stage  (2)
+Feb  9 17:26:22 147537ba7c86 svisit: auth_getuser from hid B153A2A542F81BC1
+Feb  9 17:26:22 147537ba7c86 svisit: proc_login userid is  "AAA" find from hid B153A2A542F81BC1
+Feb  9 17:26:22 147537ba7c86 svisit: getuser a userid is  "AAA" find from hid B153A2A542F81BC1
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL:  1,  find type is 1
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL:  2, get field num 1
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL:  3, get gourp id 2
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL: get group id is 2
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL: get group name is UG1, start 2024-02-09 17:00:15+09, end 2099-12-31 23:59:59+09
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 0
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL: get user AAA access 1 password id is 5, valid time:2024-02-09 17:00:55+09 - 2099-12-31 23:59:59+09, token1 3
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 0
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL: get password id 5 password is  access 1 valid time 2024-02-09 17:00:55+09-2099-12-31 23:59:59+09, counts -1 t.
+Feb  9 17:26:22 147537ba7c86 svisit: hmacmd5_authenticate, token proc...
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL:  1,  find type is 2
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL:  2, get field num 1
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL:  3, get gourp id 2
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL: get group id is 2
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL: get group name is UG1, start 2024-02-09 17:00:15+09, end 2099-12-31 23:59:59+09
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 0
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL: get user AAA access 1 password id is 5, valid time:2024-02-09 17:00:55+09 - 2099-12-31 23:59:59+09, token1 3
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 0
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQ: find token 1 id B153A2A542F81BC1
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQ: find token 2 id is B153A2A542F81BC1
+Feb  9 17:26:22 147537ba7c86 svisit: Auth->PostgreSQL: get token hid B153A2A542F81BC1 secret is 23AA3A9F1D40E37169B210917144F0622031837348A8B5C02DBE91A8A3222E39 access 1 valid time 2024-02-09 17:20:32+09-2099-12-31 23:59:59+09 t tokenid 3.
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: string len is 48, password len is 64
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: challenge  is df5c00598f3a5d0a809e0b26544b5beb1670c4e2686463409e6ec28b6bfa5c01acbbdc5b92870592cf81b56bfd5a2311
+Feb  9 17:26:22 147537ba7c86 svisit: alg is hmac_md5
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: server compute digest out  is f9bcad00ade14041d4a2efeac5f53280
+Feb  9 17:26:22 147537ba7c86 svisit: rlm_eap_hmacmd5: client digest string is f9bcad00ade14041d4a2efeac5f53280
+Feb  9 17:26:22 147537ba7c86 svisit: hmacmd5_authenticate , update login time ...
+Feb  9 17:26:22 147537ba7c86 svisit: userid AAA
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:26:22 +0900 svisit: -  - 192.168.1.144 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:22 147537ba7c86 svisit: fromhost 192.168.1.124
+Feb  9 17:26:22 147537ba7c86 svisit: tokenid B153A2A542F81BC1
+Feb  9 17:26:22 147537ba7c86 svisit: tokentype ePass1000ND
+Feb  9 17:26:22 147537ba7c86 svisit: AuthMethod
+Feb  9 17:26:22 147537ba7c86 svisit: requrl /def
+
+==> /svisit/log/sv.auths.log <==
+Feb  9 17:26:22 147537ba7c86 svisit: AAA - 192.168.1.124 - B153A2A542F81BC1 - ePass1000ND -  -  - /def - CCode:df5c00598f3a5d0a809e0b26544b5beb1670c4e2686463409e6ec28b6bfa5c01acbbdc5b92870592cf81b56bfd5a2311 RCode:f9bcad00ade14041d4a2efeac5f53280
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:22 147537ba7c86 svisit: AAA - 192.168.1.124 - B153A2A542F81BC1 - ePass1000ND -  -  - /def - CCode:df5c00598f3a5d0a809e0b26544b5beb1670c4e2686463409e6ec28b6bfa5c01acbbdc5b92870592cf81b56bfd5a2311 RCode:f9bcad00ade14041d4a2efeac5f53280
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:26:22 +0900 svisit: -  - 192.168.1.144 -  -  - GET /def HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+09/Feb/2024:17:26:23 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/error/load.gif HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:23 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/md5.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:23 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/error/svbk.jpg HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:23 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/sv.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:23 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/protocolcheck.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:23 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/websocket.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:23 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/websocketver.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:23 +0900 svisit: -  - 192.168.1.144 -  -  - GET /system/1000ND_client.js HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 304
+09/Feb/2024:17:26:23 +0900 svisit: -  - 192.168.1.144 -  -  - GET /favicon.ico HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:24 147537ba7c86 svisit: proc_login ..... , htype
+Feb  9 17:26:24 147537ba7c86 svisit: s begin ..... 1
+Feb  9 17:26:24 147537ba7c86 svisit: proc_login cookie  "Cookie: test1=testtest; ftkeyid=A8D194115ED9284ADD2A890E581BCC973230C25AF84402FB" , s: 1
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:26:24 +0900 svisit: -  - 192.168.1.144 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:24 147537ba7c86 svisit: s in .....
+Feb  9 17:26:24 147537ba7c86 svisit: u_cookie (test1=testtest; ftkeyid=A8D194115ED9284ADD2A890E581BCC973230C25AF84402FB)
+Feb  9 17:26:24 147537ba7c86 svisit: stage  (-1)
+Feb  9 17:26:24 147537ba7c86 svisit: proc_login auth process, status  "1" , config initjson.txt is {#015#012 "tokenauth":"1",#015#012 "pwdauth":"0",#015#012 "otpauth":"0",#015#012 "requirePIN":"1",#015#012 "requireUserID":"0",#015#012 "modifyPIN":"0",#015#012 "delaytimeout":"0",#015#012 "inputpwd":"1",#015#012 "cacheuserid":"0", #015#012 "rescuepwd":"0", #015#012 "termlimit":"0", #015#012 "termvalue":"0"#015#012}
+Feb  9 17:26:36 147537ba7c86 svisit: proc_login ..... , htype
+Feb  9 17:26:36 147537ba7c86 svisit: s begin ..... 1
+Feb  9 17:26:36 147537ba7c86 svisit: proc_login cookie  "Cookie: test1=testtest; ftkeyid=A8D194115ED9284ADD2A890E581BCC973230C25AF84402FB" , s: 1
+Feb  9 17:26:36 147537ba7c86 svisit: s in .....
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:26:36 +0900 svisit: -  - 192.168.1.144 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:36 147537ba7c86 svisit: u_cookie (test1=testtest; ftkeyid=A8D194115ED9284ADD2A890E581BCC973230C25AF84402FB)
+Feb  9 17:26:36 147537ba7c86 svisit: stage  (1)
+Feb  9 17:26:36 147537ba7c86 svisit: proc_login auth process, status  "1" , config initjson.txt is {#015#012 "tokenauth":"1",#015#012 "pwdauth":"0",#015#012 "otpauth":"0",#015#012 "requirePIN":"1",#015#012 "requireUserID":"0",#015#012 "modifyPIN":"0",#015#012 "delaytimeout":"0",#015#012 "inputpwd":"1",#015#012 "cacheuserid":"0", #015#012 "rescuepwd":"0", #015#012 "termlimit":"0", #015#012 "termvalue":"0"#015#012}
+Feb  9 17:26:37 147537ba7c86 svisit: proc_login ..... , htype ePass1000ND
+Feb  9 17:26:37 147537ba7c86 svisit: s begin ..... 2
+Feb  9 17:26:37 147537ba7c86 svisit: proc_login cookie  "Cookie: test1=testtest; ftkeyid=A8D194115ED9284ADD2A890E581BCC973230C25AF84402FB" , s: 2
+Feb  9 17:26:37 147537ba7c86 svisit: s in .....
+Feb  9 17:26:37 147537ba7c86 svisit: u_cookie (test1=testtest; ftkeyid=A8D194115ED9284ADD2A890E581BCC973230C25AF84402FB)
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:26:37 +0900 svisit: -  - 192.168.1.144 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:37 147537ba7c86 svisit: stage  (1)
+Feb  9 17:26:37 147537ba7c86 svisit: proc_login userid is  "false"
+Feb  9 17:26:37 147537ba7c86 svisit: proc_login auth process, status  "2" , challenge is {#015#012 "tokencha":"0fb9bd928019ef4ef60fc3c6e08371fd7ba33013b4d5ecbf4702fb8003e7f29f0cf14ea50ed3f1658ce1889a07ddf8a8",#015#012 "pwdcha":"0fb9bd928019ef4ef60fc3c6e08371fd7ba33013b4d5ecbf4702fb8003e7f29f0cf14ea50ed3f1658ce1889a07ddf8a8",#015#012 "rpwdcha":"0fb9bd928019ef4ef60fc3c6e08371fd7ba33013b4d5ecbf4702fb8003e7f29f0cf14ea50ed3f1658ce1889a07ddf8a8"#015#012 }, userid is false
+Feb  9 17:26:38 147537ba7c86 svisit: proc_login ..... , htype ePass1000ND
+Feb  9 17:26:38 147537ba7c86 svisit: s begin ..... 3
+Feb  9 17:26:38 147537ba7c86 svisit: proc_login cookie  "Cookie: test1=testtest; ftkeyid=A8D194115ED9284ADD2A890E581BCC973230C25AF84402FB" , s: 3
+Feb  9 17:26:38 147537ba7c86 svisit: s in .....
+Feb  9 17:26:38 147537ba7c86 svisit: u_cookie (test1=testtest; ftkeyid=A8D194115ED9284ADD2A890E581BCC973230C25AF84402FB)
+Feb  9 17:26:38 147537ba7c86 svisit: stage  (2)
+Feb  9 17:26:38 147537ba7c86 svisit: auth_getuser from hid B153A2A542F81BC1
+Feb  9 17:26:38 147537ba7c86 svisit: proc_login userid is  "AAA" find from hid B153A2A542F81BC1
+Feb  9 17:26:38 147537ba7c86 svisit: getuser a userid is  "AAA" find from hid B153A2A542F81BC1
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL:  1,  find type is 1
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL:  2, get field num 1
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL:  3, get gourp id 2
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL: get group id is 2
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL: get group name is UG1, start 2024-02-09 17:00:15+09, end 2099-12-31 23:59:59+09
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 0
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL: get user AAA access 1 password id is 5, valid time:2024-02-09 17:00:55+09 - 2099-12-31 23:59:59+09, token1 3
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 0
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL: get password id 5 password is  access 1 valid time 2024-02-09 17:00:55+09-2099-12-31 23:59:59+09, counts -1 t.
+Feb  9 17:26:38 147537ba7c86 svisit: hmacmd5_authenticate, token proc...
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL:  1,  find type is 2
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL:  2, get field num 1
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL:  3, get gourp id 2
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL: get group id is 2
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL: get group name is UG1, start 2024-02-09 17:00:15+09, end 2099-12-31 23:59:59+09
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 0
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL: get user AAA access 1 password id is 5, valid time:2024-02-09 17:00:55+09 - 2099-12-31 23:59:59+09, token1 3
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2024, month 2, day 9, hour 17, min 0
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: set time is year 2099, month 12, day 31, hour 23, min 59
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: current time is year 2024, month 2, day 9, hour 17, min 26
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQ: find token 1 id B153A2A542F81BC1
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQ: find token 2 id is B153A2A542F81BC1
+Feb  9 17:26:38 147537ba7c86 svisit: Auth->PostgreSQL: get token hid B153A2A542F81BC1 secret is 23AA3A9F1D40E37169B210917144F0622031837348A8B5C02DBE91A8A3222E39 access 1 valid time 2024-02-09 17:20:32+09-2099-12-31 23:59:59+09 t tokenid 3.
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: string len is 48, password len is 64
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: challenge  is 0fb9bd928019ef4ef60fc3c6e08371fd7ba33013b4d5ecbf4702fb8003e7f29f0cf14ea50ed3f1658ce1889a07ddf8a8
+Feb  9 17:26:38 147537ba7c86 svisit: alg is hmac_md5
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: server compute digest out  is 3de6daeecd32757490f5ee76701c5805
+Feb  9 17:26:38 147537ba7c86 svisit: rlm_eap_hmacmd5: client digest string is 3de6daeecd32757490f5ee76701c5805
+Feb  9 17:26:38 147537ba7c86 svisit: hmacmd5_authenticate , update login time ...
+Feb  9 17:26:38 147537ba7c86 svisit: userid AAA
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:26:38 +0900 svisit: -  - 192.168.1.144 -  -  - POST /system/Login.php HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:38 147537ba7c86 svisit: fromhost 192.168.1.144
+Feb  9 17:26:38 147537ba7c86 svisit: tokenid B153A2A542F81BC1
+Feb  9 17:26:38 147537ba7c86 svisit: tokentype ePass1000ND
+Feb  9 17:26:38 147537ba7c86 svisit: AuthMethod
+Feb  9 17:26:38 147537ba7c86 svisit: requrl /def
+
+==> /svisit/log/sv.auths.log <==
+Feb  9 17:26:38 147537ba7c86 svisit: AAA - 192.168.1.144 - B153A2A542F81BC1 - ePass1000ND -  -  - /def - CCode:0fb9bd928019ef4ef60fc3c6e08371fd7ba33013b4d5ecbf4702fb8003e7f29f0cf14ea50ed3f1658ce1889a07ddf8a8 RCode:3de6daeecd32757490f5ee76701c5805
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:38 147537ba7c86 svisit: AAA - 192.168.1.144 - B153A2A542F81BC1 - ePass1000ND -  -  - /def - CCode:0fb9bd928019ef4ef60fc3c6e08371fd7ba33013b4d5ecbf4702fb8003e7f29f0cf14ea50ed3f1658ce1889a07ddf8a8 RCode:3de6daeecd32757490f5ee76701c5805
+
+==> /svisit/log/sv.access.log <==
+Feb  9 17:26:38 147537ba7c86 svisit: AAA - UG1 - 192.168.1.144 - B153A2A542F81BC1 - ePass1000ND - /def -  -  -  - HTTP/1.1 200 OK
+
+==> /svisit/log/sv.debug.log <==
+Feb  9 17:26:38 147537ba7c86 svisit: AAA - UG1 - 192.168.1.144 - B153A2A542F81BC1 - ePass1000ND - /def -  -  -  - HTTP/1.1 200 OK
+
+==> /svisit/log/sv.access.log <==
+09/Feb/2024:17:26:38 +0900 svisit: -  - 192.168.1.144 -  -  - GET /def HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+09/Feb/2024:17:26:38 +0900 svisit: -  - 192.168.1.144 -  -  - GET /favicon.ico HTTP/1.1 -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 - HTTP/1.1 200
+
+
