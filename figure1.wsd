@@ -1,18 +1,30 @@
+/'
+https://www.plantuml.com/plantuml/uml/
+'/
 @startuml
 skinparam BackgroundColor transparent
 skinparam componentStyle rectangle
-component "クライアント側" as client {
+package "クライアント側" as client {
      [ブラウザ] as browser
-     [Token監視プロセス]
+     [Token監視プロセス] as token
 }
 
-component "サーバー側" as server {
-   component Backend {
-     [業務Webアプリケーション]
+package "サーバー側" as server {
+   node Backend {
+     [backend]
+     note bottom of backend
+       業務Webアプリケーション
+     end note
    }
-   component SecureVisit {
+   node SecureVisit {
      [svisitd]
+     note bottom of svisitd
+       認証処理
+     end note
      [nginx]
+     note bottom of nginx
+       振分処理等
+     end note
    }
 }
 [browser] <-> [SecureVisit]
