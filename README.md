@@ -43,6 +43,14 @@ systemctl restart rsyslog
 ``` 
 - SecureVisit fresh nginx logs: `docker exec -it centos7sv2_svisit2_1 bash -c "tail -f /svisit/logs/*.log"`
 - SecureVisit fresh svisitd logs: `docker exec -it centos7sv2_svisit2_1 bash -c "tail -f /svisit/log/*.log"`
+- Monitor SecureVisit internal redis actions:
+```bash
+docker exec -it centos7sv2_svisit2_1 bash
+yum install telnet
+telnet localhost 6379
+AUTH <redis password> #ask developer
+MONITOR
+```
 - Use pgAdmin to access PostgreSQL server. User/Password are both `postgres`, port `5432`.
 
 ## Reference
