@@ -2,6 +2,7 @@
 *.rpm
 conf
 etc
+desktop.ini
 
 # Logs
 logs

@@ -4,8 +4,16 @@ A docker playground for SecureVisit 2.0.0.9 RHEL.
 It contains
 - a SecureVisit 2.0.0.9 RHEL running on a CentOS7.9, port 8888 for admin portal.
 - a dumy backend web application server, port 5000 for HTTP access.
-- a PostgreSQL server for the backend server, service on port 5432.
-
+- ~~a PostgreSQL server for the backend server, service on port 5432.~~
+```mermaid
+graph LR
+  B[Browser]
+  subgraph centos7sv2
+    S[centos7sv2_svisit2_1]
+    BE[centos7sv2_backend-web_1] 
+  end
+  B --> S --> BE
+```
 ## Dependencies
 - Docker Desktop for Windows (>4.4.2)
 - (optional) pgAdmin
