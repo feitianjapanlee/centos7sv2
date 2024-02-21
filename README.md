@@ -9,19 +9,17 @@ It contains
 graph LR
   B[Browser]
   subgraph Host
-    S[centos7sv2_svisit2_1]
-    BE[centos7sv2_backend-web_1] 
+    SV[centos7sv2_svisit2_1] <--> BE[centos7sv2_backend-web_1] 
   end
-  B --> S --> BE
-  S ---|"
+  B <--> Host
+  B ~~~|"
   SecureVisit管理画面：https://Host:8888
   SecureVisit保護したBackend：http://Host:8080
   SecureVisit経由しないBackend：http://Host:5000
    or http://centos7sv2_backend-web_1:3000
-  "|BE
-  S ---|"SecureVisit container"|S
-  BE ---|"Backend container"|BE
-  linkStyle 2,3,4 stroke-width:0px
+  "|Host
+  SV ~~~|"SecureVisit container"|SV
+  BE ~~~|"Backend container"|BE
 ```
 ## Dependencies
 - Docker Desktop for Windows (>4.4.2)
