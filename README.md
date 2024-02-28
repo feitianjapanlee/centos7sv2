@@ -9,6 +9,7 @@ It contains
 graph LR
   B[Browser]
   subgraph Host
+    direction LR
     SV[centos7sv2_svisit2_1] <--> BE[centos7sv2_backend-web_1] 
   end
   B <--> Host
