@@ -77,3 +77,5 @@ MONITOR
 [https://developers.redhat.com/blog/2016/09/13/running-systemd-in-a-non-privileged-container#]
 - Failed to get D-Bus connection:Operation not permitted
 [https://labor.ewigleere.net/2021/02/11/docker_commit_and_test_systemctl_start_httpd/]
+- Failed to get D-Bus connection: No such file or directory
+[https://qiita.com/fukuchi0527/items/a4bcc7a6876379582f35]
