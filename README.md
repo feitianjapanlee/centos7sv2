@@ -23,14 +23,14 @@ graph LR
   BE ~~~|"Backend container"|BE
 ```
 ## Dependencies
-- Docker Desktop for Windows (>4.4.2)
+- Docker Desktop for Windows (>4.4.2) or Docker Desktop for Linux (>4.28.0)
 - (optional) pgAdmin
 
 ## Build and start this playground
 ### Bring up servers
 Place SecureVisit installer rpm `svisitc-2.0.0-9.el7.x86_64.rpm` in the `svisit2` sub-folder, and run following command in terminal:
 ```bash
-docker-compose up -d --build
+docker compose up -d --build
 ```
 ### Finish SecureVisit initialization by following steps:  
 - SecureVisit installation contains some interactive steps, so open another terminal and attach to the svisit2 container like following. 
