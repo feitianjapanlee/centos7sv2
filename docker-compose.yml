@@ -2,6 +2,8 @@ version: '3'
 services:
   svisit2:
     privileged: true
+#    pid: host
+    cgroup: host
     build:
       context: ./svisit2
       dockerfile: Dockerfile
@@ -10,13 +12,13 @@ services:
       - /usr/share/zoneinfo/Asia/Tokyo:/etc/localtime
     networks:
       - svisit-network
+    hostname: svisit2
     ports:
       - "0.0.0.0:8888:8888"
       - "0.0.0.0:8080:8080"
-#      - "0.0.0.0:8443:8443"
+      - "0.0.0.0:8443:8443"
 
   backend-web:
-    privileged: true
     build: 
       context: ./backend/demo-httpheader
       dockerfile: Dockerfile
@@ -35,7 +37,7 @@ services:
     networks:
       - svisit-network
       - backend-network
-
+    hostname: backend-web
 #  backend-db:
 #    image: postgres:latest
 #    environment:

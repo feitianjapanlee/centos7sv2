@@ -8,6 +8,7 @@ RUN yum install -y perl crontabs policycoreutils selinux-policy-targeted initscr
 RUN rpm -ivh svisitc-2.0.0-9.el7.x86_64.rpm --nodeps --force
 #RUN rpm -ivh patch-2.0.0-9.el7.x86_64.rpm --nodeps --force
 EXPOSE 8888
+VOLUME ["/sys/fs/cgroup"]
 CMD ["/sbin/init"]
 # start the container cli: docker exec -it <container> /bin/sh
 # /svisit/sbin/sv_init

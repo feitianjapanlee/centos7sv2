@@ -10,20 +10,20 @@ graph LR
   B[Browser]
   subgraph Host
     direction LR
-    SV[centos7sv2_svisit2_1] <--> BE[centos7sv2_backend-web_1] 
+    SV[centos7sv2-svisit2-1] <--> BE[centos7sv2-backend-web-1] 
   end
   B <--> Host
   B ~~~|"
   SecureVisit管理画面：https://Host:8888
   SecureVisit保護したBackend：http://Host:8080
   SecureVisit経由しないBackend：http://Host:5000
-   or http://centos7sv2_backend-web_1:3000
+  SecureVisit ContainerからBackend：http://backend-web:3000
   "|Host
   SV ~~~|"SecureVisit container"|SV
   BE ~~~|"Backend container"|BE
 ```
 ## Dependencies
-- Docker Desktop for Windows (>4.4.2) or Docker Desktop for Linux (>4.28.0)
+- Docker Desktop for Windows (>4.4.2) or Docker daemon for Linux(>25.0.3)
 - (optional) pgAdmin
 
 ## Build and start this playground
@@ -35,7 +35,7 @@ docker compose up -d --build
 ### Finish SecureVisit initialization by following steps:  
 - SecureVisit installation contains some interactive steps, so open another terminal and attach to the svisit2 container like following. 
 ```bash
-docker exec -it centos7sv2_svisit2_1 bash
+docker exec -it centos7sv2-svisit2-1 bash
 ```
 - Run initialize scripts in the svisit2 container.
 ```bash
@@ -44,24 +44,24 @@ service svisitd start
 exit
 ```
 - Install SecureVisit admin client certificate `svisit2/admin.p12` to your browser. Usually uses cert import function in your browser.
-- Access `https://<docker host>:8888/` for SecureVisit admin portal and set Port to `8080` in **Server Setting** tab and change **default** mapping's target URL to `http://centos7sv2_backend-web_1:3000`.
+- Access `https://<docker host>:8888/` for SecureVisit admin portal and set Port to `8080` in **Server Setting** tab and change **default** mapping's target URL to `http://backend-web:3000`.
 
 ## Have fun
 - Backend through SecureVisit: `http://<docker host>:8080/`
 - SecureVisit admin portal: `https://<docker host>:8888/`
 - Backend web application server: `http://<docker host>:5000/` 
-- SecureVisit mapping setting to backend server: Port `8080`, `default` map to `http://centos7sv2_backend-web_1:3000/`
+- SecureVisit mapping setting to backend server: Port `8080`, `default` map to `http://backend-web:3000/`
 - Enable debug log of SecureVisit:
 ```bash
-docker exec -it centos7sv2_svisit2_1 bash
+docker exec -it centos7sv2-svisit2-1 bash
 echo "local5.debug;local5.err;local5.alert;local5.emerg;local5.info  /usr/local/svisit/log/sv.debug.log" >> /etc/rsyslog.conf
 systemctl restart rsyslog
 ``` 
-- SecureVisit fresh nginx logs: `docker exec -it centos7sv2_svisit2_1 bash -c "tail -f /svisit/logs/*.log"`
-- SecureVisit fresh svisitd logs: `docker exec -it centos7sv2_svisit2_1 bash -c "tail -f /svisit/log/*.log"`
+- SecureVisit fresh nginx logs: `docker exec -it centos7sv2-svisit2-1 bash -c "tail -f /svisit/logs/*.log"`
+- SecureVisit fresh svisitd logs: `docker exec -it centos7sv2-svisit2-1 bash -c "tail -f /svisit/log/*.log"`
 - Monitor SecureVisit internal redis actions:
 ```bash
-docker exec -it centos7sv2_svisit2_1 bash
+docker exec -it centos7sv2-svisit2-1 bash
 yum install telnet
 telnet localhost 6379
 AUTH <redis password> #ask developer
