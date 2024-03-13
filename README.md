@@ -28,7 +28,7 @@ graph LR
 
 ## Build and start this playground
 ### Bring up servers
-Place SecureVisit installer rpm `svisitc-2.0.0-9.el7.x86_64.rpm` in the `svisit2` sub-folder, and run following command in terminal:
+Place SecureVisit installer rpm `svisitc-2.0.0-9.el7.x86_64.rpm` in the `svisit2` sub-folder, and if there's `patch-2.0.0-9.el7.x86_64.rpm` also place it in the `svisit2` sub-folder, and run following command in terminal:
 ```bash
 docker compose up -d --build
 ```
