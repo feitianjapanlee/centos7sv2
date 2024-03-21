@@ -24,7 +24,7 @@ graph LR
 ```
 ## Dependencies
 - Docker Desktop for Windows (>4.4.2) or Docker daemon for Linux(>25.0.3)
-- (optional) pgAdmin
+- ~~(optional) pgAdmin~~
 
 ## Build and start this playground
 ### Bring up servers
@@ -32,6 +32,10 @@ Place SecureVisit installer rpm `svisitc-2.0.0-9.el7.x86_64.rpm` in the `svisit2
 ```bash
 docker compose up -d --build
 ```
+There are three backend web applications `demo-httpheader`, `demo-addressbook` and `the-internet`(default). Modify the `backend-web` services section in `docker-compose.yml` to switch it.
+- `demo-httpheader`: A web application just response 200 OK with a body of request's HTTP header.
+- `demo-addressbook`: A simple addressbook web application.
+- `the-internet`: An example application that captures prominent and ugly functionality found on the web. Perfect for writing automated acceptance tests against. Fork from [https://github.com/saucelabs/the-internet] 
 ### Finish SecureVisit initialization by following steps:  
 - SecureVisit installation contains some interactive steps, so open another terminal and attach to the svisit2 container like following. 
 ```bash
