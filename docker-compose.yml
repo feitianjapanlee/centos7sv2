@@ -8,7 +8,8 @@ services:
       context: ./svisit2
       dockerfile: Dockerfile
     volumes:
-      - svdata:/svisit
+      - svhome:/svisit
+      - svdb:/usr/local/svisit
       - /usr/share/zoneinfo/Asia/Tokyo:/etc/localtime
     networks:
       - svisit-network
@@ -20,7 +21,8 @@ services:
 
   backend-web:
     build: 
-      context: ./backend/demo-httpheader
+#      context: ./backend/demo-httpheader
+      context: ./backend/the-internet
       dockerfile: Dockerfile
     volumes:
       - /usr/share/zoneinfo/Asia/Tokyo:/etc/localtime
@@ -53,7 +55,8 @@ services:
 
 volumes:
 #  dbdata:
-  svdata:
+  svhome:
+  svdb:
 
 networks:
   svisit-network:
