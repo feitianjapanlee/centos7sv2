@@ -1,0 +1,16 @@
+{
+  "name": "work",
+  "version": "1.0.0",
+  "description": "Creating a simple web application in JavaScript to meet your requirements involves using a framework like Express.js for the backend and a bit of HTML for the frontend. Below is a sample web application:",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
