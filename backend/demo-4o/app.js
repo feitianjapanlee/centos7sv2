@@ -5,14 +5,36 @@ const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const appName = 'your_app_name'; // Replace with your desired app name
+const appName = 'myapp'; // Replace with your desired app name
+const appName1 = 'online'; 
+const appName2 = 'upload';
+const appName3 = 'online2';
+const appName4 = 'upload2';
 
 const upload = multer({ dest: 'uploads/' });
+const myLogger = function(req, res, next) {
+  console.log(`[${new Date()}] ${req.method} ${req.url} Cookie:[${req.headers.cookie}]`);
+  next();
+};
 
+app.use(myLogger);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'uploads')));
 
 app.get(`/${appName}/menu`, (req, res) => {
   res.sendFile(path.join(__dirname, 'public/menu.html'));
+});
+app.get(`/${appName1}/menu`, (req, res) => {
+  res.sendFile(path.join(__dirname, `public/menu_${appName1}.html`));
+});
+app.get(`/${appName2}/menu`, (req, res) => {
+  res.sendFile(path.join(__dirname, `public/menu_${appName2}.html`));
+});
+app.get(`/${appName3}/menu`, (req, res) => {
+  res.sendFile(path.join(__dirname, `public/menu_${appName3}.html`));
+});
+app.get(`/${appName4}/menu`, (req, res) => {
+  res.sendFile(path.join(__dirname, `public/menu_${appName4}.html`));
 });
 
 app.get(`/${appName}/upload`, (req, res) => {
@@ -30,6 +52,15 @@ app.get(`/${appName}/download`, (req, res) => {
 });
 
 app.post(`/${appName}/upload`, upload.single('file'), (req, res) => {
+  const tempName = req.file.path.replace(/\\/g, "/");
+  if (tempName) {
+      const dest = "uploads/" + req.file.originalname;
+      fs.renameSync(tempName, dest);  // 長い一時ファイル名を元のファイル名にリネームする。
+      // res.render('upload', {message: `${dest} にアップロードされました。`});
+  }
+  else {
+      // res.render('upload', {message: "エラー：アップロードできませんでした。"});
+  }
   res.redirect(`/${appName}/download`);
 });
 

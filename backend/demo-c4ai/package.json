@@ -1,0 +1,15 @@
+{
+  "name": "work",
+  "version": "1.0.0",
+  "description": "Please give me a sample web application written in javascript. This web application will accept a startup string parameter, which will be the name of the root directory of the web application, or call it “app_name”. The web application has three pages, “/app_name/menu” (menu), “/app_name/upload” (upload) and “/app_name/download” (download). The menu page displays three links, the first one to itself, i.e. menu, the second one to upload, and the third one to download.The Upload page is for uploading a specific file. The download page will show links to all the uploaded files, which can be downloaded by clicking on them.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
