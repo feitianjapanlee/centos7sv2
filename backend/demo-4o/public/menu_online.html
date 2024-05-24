@@ -6,9 +6,9 @@
 <body>
   <h2>Menu for online</h2>
   <ul>
-    <li><a href="/myapp/menu">Menu</a></li>
-    <li><a href="/myapp/upload">Upload</a></li>
-    <li><a href="/myapp/download">Download</a></li>
+    <li><form method="post" name="form1" action="/online/menu"><input type="hidden" name="param1" value="value1"><a href="javascript:form1.submit()">Menu(POST)</a></form></li>
+    <li><a href="/online/upload">Upload</a></li>
+    <li><a href="/online/download">Download</a></li>
   </ul>
 </body>
 </html>

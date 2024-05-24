@@ -17,6 +17,8 @@ const myLogger = function(req, res, next) {
   next();
 };
 
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(myLogger);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'uploads')));
@@ -24,17 +26,32 @@ app.use(express.static(path.join(__dirname, 'uploads')));
 app.get(`/${appName}/menu`, (req, res) => {
   res.sendFile(path.join(__dirname, 'public/menu.html'));
 });
+app.post(`/${appName}/menu`, (req, res) => {
+  res.send(`<h2>Post received</h2>${req.body}`);
+});
 app.get(`/${appName1}/menu`, (req, res) => {
   res.sendFile(path.join(__dirname, `public/menu_${appName1}.html`));
+});
+app.post(`/${appName1}/menu`, (req, res) => {
+  res.send(`<h2>Post received</h2>${req.body}`);
 });
 app.get(`/${appName2}/menu`, (req, res) => {
   res.sendFile(path.join(__dirname, `public/menu_${appName2}.html`));
 });
+app.post(`/${appName2}/menu`, (req, res) => {
+  res.send(`<h2>Post received</h2>${req.body}`);
+});
 app.get(`/${appName3}/menu`, (req, res) => {
   res.sendFile(path.join(__dirname, `public/menu_${appName3}.html`));
 });
+app.post(`/${appName3}/menu`, (req, res) => {
+  res.send(`<h2>Post received</h2>${req.body}`);
+});
 app.get(`/${appName4}/menu`, (req, res) => {
   res.sendFile(path.join(__dirname, `public/menu_${appName4}.html`));
+});
+app.post(`/${appName4}/menu`, (req, res) => {
+  res.send(`<h2>Post received</h2>${req.body}`);
 });
 
 app.get(`/${appName}/upload`, (req, res) => {
