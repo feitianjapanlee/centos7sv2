@@ -1,6 +1,7 @@
 FROM centos:7
 WORKDIR /host
 COPY svisitc-2.0.0-9.el7.x86_64.rpm .
+COPY ./etc/svcert.bin .
 # maybe there's patch rpm
 COPY *patch-2.0.0-9.el7.x86_64.rpm .
 RUN yum install -y epel-release
