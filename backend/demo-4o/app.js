@@ -19,7 +19,7 @@ const myLogger = function(req, res, next) {
 
 app.use(myLogger);
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.get(`/${appName}/menu`, (req, res) => {
   res.sendFile(path.join(__dirname, 'public/menu.html'));
@@ -46,7 +46,7 @@ app.get(`/${appName}/download`, (req, res) => {
     if (err) {
       return res.status(500).send('Unable to scan files');
     }
-    let fileLinks = files.map(file => `<a href="/uploads/${file}" download>${file}</a>`).join('<br>');
+    let fileLinks = files.map(file => `<a href="/uploads/${file}" download="${file}">${file}</a>`).join('<br>');
     res.send(`<h2>Download Files</h2>${fileLinks}`);
   });
 });
