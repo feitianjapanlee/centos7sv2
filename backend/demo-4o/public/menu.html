@@ -6,7 +6,7 @@
 <body>
   <h2>Menu</h2>
   <ul>
-    <li><a href="/myapp/menu">Menu</a></li>
+    <li><form method="post" name="form1" action="/myapp/menu"><input type="hidden" name="param1" value="value1"><a href="javascript:form1.submit()">Menu(POST)</a></form></li>
     <li><a href="/myapp/upload">Upload</a></li>
     <li><a href="/myapp/download">Download</a></li>
   </ul>
